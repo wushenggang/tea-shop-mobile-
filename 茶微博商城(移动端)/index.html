@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="">
+<head>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+<!--scroll-->
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/swiper_scroll.js"></script>
+<!-- Bootstrap -->
+<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" media="screen" href="css/wxcss1.css">
+<!--scroll-->
+<link rel="stylesheet" href="css/swiper.min.css">
+<style>
+*{ font-family:"微软雅黑";}
+body{ background:#f6f6f6;}
+a{ color:#000000;}
+img{ display:block;}
+.clearfix{ clear:both;}
+.moreNewsLink { position: relative;}
+ .moreNewsLink::before {content: ""; height:34px; width:34px; background-size:14px 14px;
+        display:block; position: absolute;left: -40%; }
+a{ color:#121212; text-decoration:none;}
+
+.tb_b{ width:100%; height:90px; background:#fff;}
+.tb{ float:left; width:14%; margin:5px 0 0 21px;}
+.tb img{ float:left; width:80% !important;}
+
+.tb p{ float:left;font-size:1em; width:100%; text-align:center;margin:8px 0 0 -6px; color:#2c3038;}
+
+/*栏目*/
+.logo_b2{ width:60%; margin:auto;}
+.logo_b2 img{ width:100%; margin:0 0 13px 0;}
+hr{ width:94%; margin:auto; height:1px;border:none;border-top:1px dashed #626262;}
+
+/*滑动*/
+#header {z-index:999;width:100%;  margin:16px 0 0 0;
+	overflow: hidden;background: #f6f6f6;}
+#header .swiper-slide { margin:0 10px; width:78%;}
+.swiper-slide img{ width:100%;}
+<!--展示-->
+
+.pro_b{ width:90%;}
+.pro_le{ width:46%; margin:20px 0 0 10px; float:left;}
+.pro_le img{ width:100%;}
+
+.h4{ font-size:1.1em; color:#000; font-weight:bold; margin-top:10px;}
+.h5{ font-size:0.9em; color:#6b6b6b; margin-top:7px;}
+.h6{color:#fd2323; font-size:1.2em; display:inline-block;  margin-top:6px;}
+span{ color:#fd2323; font-size:0.9em; display:inline-block; font-weight:normal;}
+.h7{ margin-left:4.5em; font-size:0.9em;}
+
+@media (min-width:320px){.tb_b{ height:70px; }
+                        .tb{ float:left; width:13%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -2px;}
+             .h7{ margin-left:3em; font-size:0.8em;}
+             .h77{ margin-left:2.5em; font-size:0.8em;}
+             }
+@media (min-width:360px){.tb_b{ height:80px; }
+                        .tb{ float:left; width:14%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -4px;}
+             .h7{ margin-left:3.5em; font-size:0.8em;}
+             .h77{ margin-left:3em; font-size:0.8em;}
+             }               
+@media (min-width:375px){.tb_b{ height:80px; }
+                        .tb{ float:left; width:14.2%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -6px;}
+             .h7{ margin-left:4em; font-size:0.8em;}
+             .h77{ margin-left:4em; font-size:0.8em;}
+             }             
+@media (min-width:411px){.tb_b{ height:80px; }
+                        .tb{ float:left; width:14.6%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -6px;}
+             .h7{ margin-left:5.8em; font-size:0.8em;}
+             .h77{ margin-left:5.4em; font-size:0.8em;}
+             }
+@media (min-width:414px){.tb_b{ height:84px; }
+                        .tb{ float:left; width:14.7%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -6px;}
+             .h7{ margin-left:5.8em; font-size:0.8em;}
+             .h77{ margin-left:5.4em; font-size:0.8em;}
+             }                         
+@media (min-width:435px){.tb_b{ height:88px; }
+                        .tb{ float:left; width:14.9%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -6px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }  
+@media (min-width:568px){.tb_b{ height:115px; }
+                        .tb{ float:left; width:16%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -2px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }             
+@media (min-width:667px){.tb_b{ height:125px; }
+                        .tb{ float:left; width:16.5%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:0.9em; margin:8px 0 0 -2px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }             
+@media (min-width:736px){.tb_b{ height:135px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1em; margin:8px 0 0 -14px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }
+@media (min-width:980px){.tb_b{ height:180px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.1em; margin:8px 0 0 -20px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }                                   
+@media (min-width:1280px){.tb_b{ height:210px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.2em; margin:8px 0 0 -26px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }
+@media (min-width:1366px){.tb_b{ height:230px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.3em; margin:8px 0 0 -28px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }
+@media (min-width:1440px){.tb_b{ height:240px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.4em; margin:8px 0 0 -30px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }
+@media (min-width:1600px){.tb_b{ height:270px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.5em; margin:8px 0 0 -30px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }
+@media (min-width:1680px){.tb_b{ height:270px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.5em; margin:8px 0 0 -32px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }
+@media (min-width:1920px){.tb_b{ height:310px; }
+                        .tb{ float:left; width:17%; margin:5px 0 0 20px;}
+                        
+                        .tb p{ float:left;font-size:1.6em; margin:8px 0 0 -38px;}
+             .h7{ margin-left:6em; font-size:0.8em;}
+             .h77{ margin-left:5.8em; font-size:0.8em;}
+             }						 					 
+.swiper-container{
+  width:100%;
+  overflow:hidden;
+  background:#fff;
+}
+.top-line{
+  height:0;
+  width:100%;
+  border-top:1px solid #e6e6e6;
+  margin-top:10px;
+}
+.bottom-line{
+  height:0;
+  width:100%;
+  border-bottom:1px solid #e6e6e6;
+  margin-bottom:22px;
+} 						 
+</style>
+<meta charset="utf-8">
+<title>茶博微商城</title>
+
+</head>
+
+<body id="list-model">
+	<div id="listBox" class="slideBox">
+ 
+ <!--页眉开始-->
+ <div class="bd">
+	<div class="tempWrap" style="overflow:hidden; position:relative;">
+       <ul style="width: 5850px; position: relative; overflow: hidden; padding: 0px; 
+       margin: 0px; transition-duration: 0ms; -webkit-transition-duration: 0ms;
+        -webkit-transform: translate(-3510px, 0px) translateZ(0px);">             
+                    	
+    <!--banner第一张-->  
+        <li style="display: table-cell; vertical-align: top; width: 1170px;">
+        <img src="images/baner_1.png" class="img-responsive"></li>
+        
+     <!--banner第二张-->    
+        <li style="display: table-cell; vertical-align: top; width: 1170px;">
+        <img src="images/baner_2.png" class="img-responsive"></li>
+        
+     <!--banner第三张-->    
+        <li style="display: table-cell; vertical-align: top; width: 1170px;">
+        <img  src="images/baner_3.png" class="img-responsive"></li>
+     </div>
+ <!--页眉结束-->
+  
+				<!--轮播圆圈-->
+                <div class="hd">
+					<ul>
+                    <li class="">1</li>
+                    <li class="">2</li>
+                    <li class="on">3</li>
+                     <li class="">4</li>
+                    </ul>
+				</div> 
+      <script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#listBox",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"leftLoop", 
+					autoPage:true,//自动分页
+					autoPlay:true //自动播放
+				});
+			</script>  <!--轮播圆圈结束-->
+</div>
+
+<!--图标-->
+<div class="top-line"></div>
+  <div class="swiper-container">
+     <div class="tb_b swiper-wrapper" id="tb_b">
+        <li class="tb swiper-slide"><a href="list_tea.html"><img src="images/icon_1.png"><p>茶叶</p></a></li>
+        <li class="tb swiper-slide"><a href=""><img src="images/icon_2.png"><p>茶具</p></a></li>
+        <li class="tb swiper-slide"><a href="list_cul.html"><img src="images/icon_3.png"><p>茶文创</p></a></li>
+        <li class="tb swiper-slide"><a href=""><img src="images/icon_4.png"><p>茶培训</p></a></li>
+        <li class="tb swiper-slide"><a href=""><img src="images/icon_5.png"><p>茶活动</p></a></li>
+    </div>
+  </div>
+<div class="bottom-line"></div>    
+<div class="clearfix"></div>
+
+<div class="logo_b2"><img src="images/logo11.png">
+                    </div>
+
+ <hr>
+<div class="clearfix"></div>
+
+<!--滑动-->
+<div id="header">
+  <div id="top-line"></div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href=""><img src="images/slidet_1.png"></a></div>
+    <div class="swiper-slide"><a href=""><img src="images/slidet_2.png" ></a></div>
+    <div class="swiper-slide"><a href=""><img src="images/slidet_3.png"></a></div>
+    <div class="swiper-slide"><a href=""><img src="images/slidet_4.png"></a></div>
+  </div>
+</div>
+
+<!--展示-->
+
+    <div class="pro_b">
+        <div class="pro_le">
+          <a href="">
+          <img src="images/display_1.png">
+          <li class="h4">[西湖龙井]</li>
+          <li class="h5">颜色翠绿，形状扁平</li>
+          <li class="h6">280<span>元</span><span class="h7">250克/包</span></li>
+          </a>
+     </div>
+     
+   <div class="pro_le">
+          <a href="">
+          <img src="images/display_2.png">
+          <li class="h4">[长盛川]</li>
+          <li class="h5">砖身紧致，色泽黑褐</li>
+          <li class="h6">528<span>元</span><span class="h77">270克/4罐</span></li>
+          </a>
+    </div>
+
+      <div class="pro_le">
+          <a href="">
+          <img src="images/display_3.png">
+          <li class="h4">《话说中国茶》</li>
+          <li class="h5">史文互证，图文互补</li>
+          <li class="h6">108<span>元</span><!--<span class="h77">270克/4罐</span>--></li>
+          </a>
+    </div>
+    
+     <div class="pro_le">
+          <a href="">
+          <img src="images/display_4.png">
+          <li class="h4">[茶道六君子袋]</li>
+          <li class="h5">做工精致，美观精巧</li>
+          <li class="h6">50<span>元</span><!--<span class="h77">270克/4罐</span>--></li>
+          </a>
+    </div>
+    
+    
+    
+    
+    </div>
+
+
+
+
+</body></html>
